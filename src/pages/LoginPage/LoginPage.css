@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   border-radius: 8px;
+  height: 250px;
   border: 1px solid rgba(204, 204, 204, 0.8);
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -12,8 +13,8 @@
   flex-direction: column;
   justify-content: center;
   background-color: var(--color-primary);
-  height: 200px;
-  width: 150px;
+  height: 100%;
+  width: 200px;
 }
 .login_container div p {
   font-size: 0.8em;
@@ -31,6 +32,10 @@
 
 .form_input {
   width: 80%;
+}
+
+.text_danger {
+  font-size: 0.7em !important;
 }
 
 .submit_login_btn {
