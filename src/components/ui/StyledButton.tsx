@@ -19,16 +19,24 @@ const PrimaryButton = styled(Button)`
 interface ButtonProps {
     primary: boolean;
     aditionalstyle?: string;
+    type?: "button" | "submit" | "reset"; 
+    onClick?: () => void;
 }
 
-export const StyledButton: React.FC<ButtonProps> = ({ primary, children, aditionalstyle }) => {
+export const StyledButton: React.FC<ButtonProps> = ({ primary, children, aditionalstyle, type, onClick }) => {
     const StyledComponent = primary ? PrimaryButton : Button;
 
+    const handleClick = () => {
+        if (onClick) {
+            onClick();
+        } else {
+            console.error("Invalid onClick type. Expected a function.");
+        }
+    };
+
     return (
-        <>
-            <StyledComponent className={aditionalstyle}>
-                {children}
-            </StyledComponent>
-        </>
+        <StyledComponent className={aditionalstyle} type={type} onClick={handleClick}>
+            {children}
+        </StyledComponent>
     )
 }

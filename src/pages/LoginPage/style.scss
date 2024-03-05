@@ -1,13 +1,30 @@
 .login_container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 250px;
     padding: 12px;
     border-radius: 8px;
     border: 1px solid #cccc;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
+    p {
+        font-size: 0.8em;
+        margin: 12px 0px;
+        font-weight: lighter;
+    }
+
     form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         margin-top: 12px;
+        gap: 12px;
+        
+        .submit_login_btn {
+            margin-top: 12px;
+            border-radius: 4px !important;
+        }
     }
 }

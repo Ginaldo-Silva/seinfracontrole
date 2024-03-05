@@ -13,7 +13,7 @@ export const Navbar = () => {
                     </ul>
             </nav>
             <Link to={"/LoginPage"}>
-                <StyledButton primary={true} children="Login" aditionalstyle="nav_login_btn" />
+                <StyledButton primary={true} children="Login" aditionalstyle="nav_login_btn" type="button" />
             </Link>
         </header>
     )
