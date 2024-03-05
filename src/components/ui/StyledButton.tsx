@@ -4,6 +4,8 @@ import styled from "styled-components";
 const Button = styled.button`
     cursor: pointer;
     background-color: transparent;
+    text-align: center;
+    letter-spacing: 1px;
     border: 1px solid  #cccc;
     padding: 8px;
     border-radius: 75px;

@@ -25,14 +25,17 @@ const StyledInput = styled.input`
 `
 
 interface InputProps {
+    name: string;
     aditionalStyles?: string;
     placeholder: string;
+    type: string;
+    required: boolean;
 }
 
-export const StyledFormInput: React.FC<InputProps> = ({ aditionalStyles, placeholder }) => {
+export const StyledFormInput: React.FC<InputProps> = ({ name, aditionalStyles, placeholder, type, required }) => {
     return (
         <>
-            <StyledInput className={aditionalStyles} placeholder={placeholder} />
+            <StyledInput className={aditionalStyles} name={name} placeholder={placeholder} type={type} required={required} />
         </>
     )
 }
